@@ -18,7 +18,6 @@ let searchCity =
     : localStorage.getItem('city');
 
 // API
-// https://api.openweathermap.org/data/2.5/weather?q=Quetta&appid=f61f119ab17fd239b25d494626c2b863&units=metric
 const apiKey = 'f61f119ab17fd239b25d494626c2b863';
 
 // Show default city on initial load
@@ -61,7 +60,7 @@ async function getWeather(city) {
   async function getTime(data) {
     try {
       const response = await fetch(
-        `http://api.geonames.org/timezoneJSON?lat=${data.coord.lat}&lng=${data.coord.lon}&username=ilyas.459`
+        `http://secure.geonames.org/timezoneJSON?lat=${data.coord.lat}&lng=${data.coord.lon}&username=ilyas.459`
       );
       const responseJson = await response.json();
 
