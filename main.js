@@ -60,7 +60,7 @@ async function getWeather(city) {
   async function getTime(data) {
     try {
       const response = await fetch(
-        `http://secure.geonames.org/timezoneJSON?lat=${data.coord.lat}&lng=${data.coord.lon}&username=ilyas.459`
+        `https://secure.geonames.org/timezoneJSON?lat=${data.coord.lat}&lng=${data.coord.lon}&username=ilyas.459`
       );
       const responseJson = await response.json();
 
