@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <main>
+      <div class="main-container container">
+        <h1>Simple Weather App</h1>
+
+        <form>
+          <input
+            type="text"
+            name="city"
+            id="city"
+            placeholder="Enter your city name"
+          />
+          <button type="submit" class="btn">Search</button>
+        </form>
+
+        <div class="error"></div>
+
+        <div class="weather-container container">
+          <!-- City, Country -->
+          <p class="location-info">
+            <span class="city"></span>, <span class="country"></span> -
+            <span class="time"></span>
+          </p>
+          <!-- icon -->
+          <img id="icon" src="" alt="icon" />
+          <!-- Temp -->
+          <h2 class="temp"></h2>
+          <!-- Weather description -->
+          <h4 class="description"></h4>
+          <!-- Feels like -->
+          <p class="feels-like">Feels like: <span id="feels-like"></span>°</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

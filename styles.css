@@ -1,0 +1,283 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap');
+
+/*  --- CSS Variables --- */
+
+:root {
+  /* Colors */
+  --primary-color: #ec6e4c;
+  --primary-color-light: var(--primary-color);
+  --primary-color-dark: var(--primary-color);
+  --secondary-color: rgb(116, 190, 219);
+  --secondary-color-light: var(--secondary-font);
+  --secondary-color-dark: var(--secondary-font);
+  --text-color: var(--primary-color);
+  --text-color-light: var(--primary-color);
+  --accent-color: var(--primary-color);
+  --input-color: var(--primary-color);
+  --body-color: var(--secondary-font);
+
+  /* Font & Typography */
+  --primary-font: 'Poppins', sans-serif;
+  --secondary-font: 'Poppins', sans-serif;
+
+  --h1-font-size: clamp(1.2rem, 5vw, 2rem);
+  --h2-font-size: clamp(3rem, 5vw, 4.6rem);
+  --h3-font-size: clamp(1.6rem, 4vw, 2.6rem);
+  --h4-font-size: clamp(1rem, 4vw, 1.5rem);
+  --normal-font-size: clamp(0.75rem, 4vw, 1.1rem);
+  --small-font-size: clamp(0.6rem, 5vw, 0.8rem);
+  --big-font-size: clamp(2rem, 5vw, 4rem);
+
+  --thin-weight: 100;
+  --light-weight: 200;
+  --normal-weight: 400;
+  --medium-weight: 500;
+  --semi-bold-weight: 600;
+  --bold-weight: 700;
+  --heavy-weight: 900;
+}
+
+/*  --- BASE ---  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--secondary-font);
+  font-size: var(--normal-font-size);
+  font-weight: var(--medium-weight);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--primary-color);
+  font-family: var(--primary-font);
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  font-weight: 300;
+  margin-top: -1.5rem;
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  position: relative;
+  margin-top: -1.6rem;
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+  font-weight: 400;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+  transition: 0.3s;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+input {
+  outline: none;
+  border-radius: 5rem 0 0 5rem;
+  height: 3.5rem;
+  padding: 0.5rem 2rem;
+  border: 2px solid var(--primary-color);
+
+  font-size: var(--normal-font-size);
+}
+
+input:nth-of-type(1) {
+  width: 75%;
+  /* background-color: red; */
+}
+
+input::placeholder {
+  border: none;
+  color: var(--primary-color);
+  font-family: var(--primary-font);
+  font-size: var(--normal-font-size);
+}
+
+/*  --- BUTTONS ---  */
+.btn {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: #fff;
+  height: 3.5rem;
+  padding: clamp(0.7rem, 5vw, 0.8rem) clamp(1.25rem, 5vw, 2rem);
+  font-family: var(--primary-font);
+  font-size: var(--normal-font-size);
+  font-weight: var(--normal-weight);
+  border: 2px solid var(--accent-color);
+  border-radius: 0 5rem 5rem 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+.btn-outline:hover,
+.btn-outline:focus {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+/*   --- Reuseable CSS Classes ---   */
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* ----------------- Page Styles ------------------------ */
+main {
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+  background: rgba(23, 23, 23, 0.341)
+    url('https://images.unsplash.com/photo-1579619572008-3fe9f19748ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')
+    no-repeat center center/cover;
+  background-blend-mode: overlay;
+}
+
+main.day-clear {
+  background: rgba(23, 23, 23, 0.341)
+    url('https://images.unsplash.com/photo-1582017591586-ffc58bea02f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80')
+    no-repeat top right/cover;
+  background-blend-mode: overlay;
+}
+
+main.day-cloudy {
+  background: rgba(23, 23, 23, 0.341)
+    url('https://images.unsplash.com/photo-1598717123623-994ab270a08e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80')
+    no-repeat center center/cover;
+  background-blend-mode: overlay;
+}
+
+main.night-clear {
+  background: rgba(23, 23, 23, 0.22)
+    url('https://images.unsplash.com/photo-1509773896068-7fd415d91e2e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80')
+    no-repeat center center/cover;
+  background-blend-mode: overlay;
+}
+
+main.night-cloudy {
+  background: rgba(23, 23, 23, 0.341)
+    url('https://images.unsplash.com/photo-1541746951956-4f27df54f02b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80')
+    no-repeat center center/cover;
+  background-blend-mode: overlay;
+}
+
+.main-container {
+  display: grid;
+  place-items: center;
+  background-color: #ffffff;
+  /* width: auto; */
+  max-width: 800px;
+  height: auto;
+  padding: 4.5rem 2rem;
+  /* margin: 2rem; */
+  border-radius: 1rem;
+}
+
+form {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 560px;
+}
+
+.weather-container {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  max-width: 400px;
+  background-color: #ec6f4c07;
+  margin-top: 3rem;
+  border-radius: 1rem;
+  padding: 1.2rem 1rem;
+}
+.error {
+  min-width: 300px;
+  max-width: 400px;
+  background-color: #ec6f4c07;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.location-info {
+  display: inline;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.59);
+  margin-bottom: 1rem;
+}
+
+h2.temp::after {
+  content: '°';
+  opacity: 0.9;
+  position: absolute;
+  font-size: var(--h3-font-size);
+}
+
+img#icon {
+  filter: drop-shadow(1px 1px 0 rgb(118, 118, 118));
+}
+
+h4.description {
+  text-transform: capitalize;
+  font-size: var(--h4-font-size);
+}
