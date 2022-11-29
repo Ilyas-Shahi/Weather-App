@@ -87,7 +87,7 @@ function showWeather(data, timeZone) {
 
   icon.setAttribute(
     'src',
-    `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
   );
 
   temp.textContent = Math.round(data.main.temp);
